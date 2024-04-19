@@ -20,7 +20,7 @@ abstract contract Owned {
         emit OwnershipTransferred(address(0), _owner);
     }
 
-    function transferOwnership(address newOwner) public virtual onlyOwner {
+    function transferOwnership(address newOwner) external virtual onlyOwner {
         owner = newOwner;
 
         emit OwnershipTransferred(msg.sender, newOwner);
